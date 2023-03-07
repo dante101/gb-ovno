@@ -1,0 +1,25 @@
+#!/bin/python3
+
+#Task 1
+mg = [int(i) for i in input("Enter:").split()]
+
+a = mg[0]
+b = mg[1]
+v = set()
+n = set()
+
+v = [int(i) for i in input("Enter:").split()]
+n = [int(i) for i in input("Enter:").split()]
+
+total = list(set(v) & set(b))
+print(total)
+
+#Task2 
+n = int(input("Enter:"))
+list = [int(i) for i in input("Enter number:").split()]
+num_bush = len(list)
+list = list + list[:2]
+summ = 0
+for i in range(num_bush):
+    summ = max(sum, list[i] + list[i+1] + list[i+2])
+print(summ)
